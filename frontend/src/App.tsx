@@ -1,7 +1,16 @@
-
+import AppHeader from "./components/AppHeader"
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import StudentEdit from "./pages/StudentEdit"
 function App() {
   return (
-    <div className="text-red-500">YES</div>
+    <>
+      <AppHeader />
+      <Routes>
+        <Route path="/edit" element={<StudentEdit />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   )
 }
 
